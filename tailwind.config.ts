@@ -12,26 +12,15 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: {
-				DEFAULT: '1rem',
-				sm: '1rem',
-				md: '1.5rem',
-				lg: '2rem',
-				xl: '2.5rem',
-				'2xl': '3rem',
-			},
+			padding: '2rem',
 			screens: {
-				sm: '640px',
-				md: '768px',
-				lg: '1024px',
-				xl: '1280px',
-				'2xl': '1920px',
+				'2xl': '1400px'
 			}
 		},
 		extend: {
-			screens: {
-				'3xl': '1920px',
-			},
+			// screens: {
+			// 	'3xl': '1920px',
+			// },
 			fontFamily: {
 				'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
 				'display': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
