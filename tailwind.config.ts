@@ -14,11 +14,11 @@ export default {
 			center: true,
 			padding: {
 				DEFAULT: '1rem',
-				sm: '1.5rem',
-				md: '2rem',
-				lg: '3rem',
-				xl: '4rem',
-				'2xl': '5rem',
+				sm: '1rem',
+				md: '1.5rem',
+				lg: '2rem',
+				xl: '2.5rem',
+				'2xl': '3rem',
 			},
 			screens: {
 				sm: '640px',
