@@ -25,12 +25,12 @@ export default {
 				md: '768px',
 				lg: '1024px',
 				xl: '1280px',
-				'2xl': '1800px',
+				'2xl': '1920px',
 			}
 		},
 		extend: {
 			screens: {
-				'3xl': '1800px',
+				'3xl': '1920px',
 			},
 			fontFamily: {
 				'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
