@@ -54,7 +54,7 @@ const Header = () => {
         {/* Top Bar */}
         <div className="flex items-center justify-between py-2 text-sm text-muted-foreground border-b border-border">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1 text-sm sm:text-base">
+            <span className="flex items-center gap-1">
               <Globe className="h-4 w-4" />
               Global B2B Marketplace
             </span>
@@ -62,24 +62,24 @@ const Header = () => {
           <div className="flex items-center gap-4">
             {user ? (
               <>
-                <span className="text-foreground text-sm sm:text-base">Welcome, {profile?.full_name || user.email}</span>
+                <span className="text-foreground">Welcome, {profile?.full_name || user.email}</span>
                 {profile?.role === 'seller' && (
-                                  <Link to="/seller-dashboard" className="hover:text-foreground transition-colors text-sm sm:text-base">
+                                  <Link to="/seller-dashboard" className="hover:text-foreground transition-colors">
                   Sell on IndiPort
                 </Link>
                 )}
                 {profile?.role === 'admin' && (
-                                  <Link to="/admin-dashboard" className="hover:text-foreground transition-colors text-sm sm:text-base">
+                                  <Link to="/admin-dashboard" className="hover:text-foreground transition-colors">
                   Admin
                 </Link>
                 )}
               </>
             ) : (
               <>
-                <Link to="/auth" className="hover:text-foreground transition-colors text-sm sm:text-base">
+                <Link to="/auth" className="hover:text-foreground transition-colors">
                   Sell on IndiPort
                 </Link>
-                <Link to="/auth" className="hover:text-foreground transition-colors text-sm sm:text-base">
+                <Link to="/auth" className="hover:text-foreground transition-colors">
                   My Account
                 </Link>
               </>
@@ -93,11 +93,11 @@ const Header = () => {
             <div className="bg-gradient-primary p-2 rounded-lg">
               <Globe className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl sm:text-2xl font-bold text-foreground">IndiPort</span>
+            <span className="text-2xl font-bold text-foreground">IndiPort</span>
           </Link>
 
           {/* Search Bar */}
-          <div className="flex-1 max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-4 sm:mx-6 md:mx-8 lg:mx-12">
+          <div className="flex-1 max-w-2xl mx-8">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 sm:h-5 sm:w-5" />
               <Input 
@@ -105,7 +105,7 @@ const Header = () => {
                 value={searchTerm} 
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                className="pl-10 pr-4 py-2 sm:py-3 text-sm sm:text-base md:text-lg" 
+                className="pl-10 pr-4 py-3 text-lg" 
               />
               <Button 
                 size="sm" 
@@ -181,11 +181,11 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="py-3 border-t border-border">
-          <div className="flex items-center gap-3 sm:gap-4 md:gap-6 overflow-x-auto">
+          <div className="flex items-center gap-6">
             {/* Role-specific primary links first */}
             <Link 
               to="/products" 
-              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/products') ? 'nav-link-active' : ''}`}
+              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/products') ? 'nav-link-active' : ''}`}
             >
               {t('nav.products')}
             </Link>
@@ -193,7 +193,7 @@ const Header = () => {
             {user && profile?.role === 'buyer' && (
               <Link 
                 to="/buyer-dashboard" 
-                className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/buyer-dashboard') ? 'nav-link-active' : ''}`}
+                className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/buyer-dashboard') ? 'nav-link-active' : ''}`}
               >
                 My Orders
               </Link>
@@ -202,7 +202,7 @@ const Header = () => {
             {user && profile?.role === 'seller' && (
               <Link 
                 to="/seller-dashboard" 
-                className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/seller-dashboard') ? 'nav-link-active' : ''}`}
+                className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/seller-dashboard') ? 'nav-link-active' : ''}`}
               >
                 My Products
               </Link>
@@ -211,7 +211,7 @@ const Header = () => {
             {user && profile?.role === 'admin' && (
               <Link 
                 to="/admin-dashboard" 
-                className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/admin-dashboard') ? 'nav-link-active' : ''}`}
+                className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/admin-dashboard') ? 'nav-link-active' : ''}`}
               >
                 Manage Platform
               </Link>
@@ -220,25 +220,25 @@ const Header = () => {
             {/* Common links */}
             <Link 
               to="/about" 
-              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/about') ? 'nav-link-active' : ''}`}
+              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/about') ? 'nav-link-active' : ''}`}
             >
               About
             </Link>
             <Link 
               to="/trade-assurance" 
-              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/trade-assurance') ? 'nav-link-active' : ''}`}
+              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/trade-assurance') ? 'nav-link-active' : ''}`}
             >
               Trade Assurance
             </Link>
             <Link 
               to="/help-center" 
-              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/help-center') ? 'nav-link-active' : ''}`}
+              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/help-center') ? 'nav-link-active' : ''}`}
             >
               Help Center
             </Link>
             <Link 
               to="/contact-us" 
-              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative text-sm sm:text-base ${isActiveRoute('/contact-us') ? 'nav-link-active' : ''}`}
+              className={`nav-link font-bold text-foreground hover:text-primary transition-colors duration-200 relative ${isActiveRoute('/contact-us') ? 'nav-link-active' : ''}`}
             >
               Contact Us
             </Link>

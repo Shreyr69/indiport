@@ -19,22 +19,22 @@ const Index = () => {
       <section className="text-white min-h-screen flex items-center justify-center relative overflow-hidden">
         <HeroCarousel />
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Global B2B Trade<br />
             <span className="text-accent">Made Simple</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-8 opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
             Connect with millions of suppliers worldwide. Source products, negotiate prices, and grow your business with IndiPort's trusted B2B marketplace.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/products">
-              <Button size="lg" className="btn-accent text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
+              <Button size="lg" className="btn-accent text-lg px-8 py-4">
                 Start Sourcing
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link to="/seller-dashboard">
-              <Button size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-blue-500 bg-white">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-white text-blue-500 bg-white">
                 Become a Supplier
               </Button>
             </Link>
@@ -224,20 +224,20 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Grow Your Business?
           </h2>
-          <p className="text-xl sm:text-2xl md:text-3xl xl:text-4xl mb-8 opacity-90 max-w-3xl mx-auto">
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Join thousands of businesses already trading on IndiPort. Start sourcing or selling today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/buyer-dashboard">
-              <Button size="lg" className="btn-accent text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
+              <Button size="lg" className="btn-accent text-lg px-8 py-4">
                 Start Buying
               </Button>
             </Link>
             <Link to="/seller-dashboard">
-              <Button size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white bg-slate-50 text-blue-500">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-white bg-slate-50 text-blue-500">
                 Start Selling
               </Button>
             </Link>
